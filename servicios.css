@@ -1,0 +1,194 @@
+/* === Paleta de Colores === */
+:root {
+  --azul: #1E88E5;
+  --amarillo: #F9C80E;
+  --gris-oscuro: #2E2E2E;
+  --blanco: #FFFFFF;
+  --gris-claro: #F8F9FA;
+  --azul-oscuro: #1565C0;
+}
+
+/* === Tipografía moderna === */
+body {
+  background: linear-gradient(180deg, var(--gris-claro) 0%, var(--blanco) 60%, #E3F2FD 100%);
+  font-family: "Poppins", Arial, sans-serif;
+  color: var(--gris-oscuro);
+  line-height: 1.6;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* === NAVBAR === */
+.navbar {
+  background: linear-gradient(90deg, var(--azul-oscuro), var(--azul));
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* ✨ Efecto brillante en "Concretos Sharmelly" === */
+.navbar-brand {
+  color: var(--amarillo) !important;
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 6px rgba(249, 200, 14, 0.6);
+  animation: brillo-logo 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes brillo-logo {
+  0% {
+    text-shadow: 0 0 5px rgba(249, 200, 14, 0.4),
+                 0 0 10px rgba(249, 200, 14, 0.2);
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(249, 200, 14, 1),
+                 0 0 25px rgba(249, 200, 14, 0.9);
+  }
+}
+
+.nav-link {
+  color: var(--blanco) !important;
+  font-weight: 500;
+  margin-left: 10px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--amarillo) !important;
+  text-decoration: underline;
+}
+
+/* === CABECERA === */
+.header-txt {
+  text-align: center;
+  margin: 40px 10%;
+  background: linear-gradient(135deg, var(--azul), var(--azul-oscuro));
+  padding: 60px 20px;
+  border-radius: 15px;
+  color: var(--blanco);
+  box-shadow: 0 6px 20px rgba(30,136,229,0.3);
+}
+
+.header-txt h1 {
+  color: var(--amarillo);
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px rgba(249, 200, 14, 0.9);
+}
+
+.header-txt p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--blanco);
+  opacity: 0.9;
+}
+
+/* === BOTÓN COMPRAR === */
+.btn-comprar {
+  background: linear-gradient(90deg, var(--amarillo), #FFD84A);
+  color: var(--gris-oscuro);
+  border: none;
+  margin: 10px;
+  padding: 12px 26px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(249, 200, 14, 0.4);
+}
+
+.btn-comprar:hover {
+  background: var(--azul);
+  color: var(--blanco);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(30,136,229,0.5);
+}
+
+/* === SECCIÓN SERVICIOS === */
+.servicio-card {
+  border-radius: 15px;
+  background: linear-gradient(180deg, var(--blanco) 0%, #EEF4FF 100%);
+  border: 2px solid transparent;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.servicio-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--azul);
+  box-shadow: 0 8px 20px rgba(30, 136, 229, 0.25);
+}
+
+.servicio-card h5 {
+  color: var(--azul);
+  font-weight: 700;
+  text-shadow: 0 0 6px rgba(30, 136, 229, 0.3);
+}
+
+.servicio-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.servicio-card li {
+  margin-bottom: 6px;
+  color: #198754;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.servicio-card li::before {
+  content: "✔";
+  color: var(--amarillo);
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+/* === SECCIÓN CÓMO TRABAJAMOS === */
+.paso {
+  background: linear-gradient(90deg, var(--blanco) 0%, #E3F2FD 100%);
+  border-radius: 12px;
+  padding: 20px;
+  font-weight: 500;
+  color: var(--azul);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.paso:hover {
+  background: var(--blanco);
+  border-color: var(--azul);
+  box-shadow: 0 6px 14px rgba(30,136,229,0.3);
+  transform: translateY(-3px);
+}
+
+/* === FOOTER === */
+footer {
+  background: linear-gradient(90deg, var(--gris-oscuro), #1a1a1a);
+  color: var(--blanco);
+  padding: 40px 0;
+  margin-top: 60px;
+  text-align: center;
+  border-top: 3px solid var(--amarillo);
+}
+
+footer a {
+  color: var(--amarillo);
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--azul);
+}
+
+footer strong {
+  color: var(--amarillo);
+}
+
+footer i {
+  transition: transform 0.3s;
+}
+
+footer i:hover {
+  transform: scale(1.2);
+  color: var(--amarillo);
+}

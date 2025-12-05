@@ -1,0 +1,179 @@
+/* === Paleta de Colores === */
+:root {
+  --azul: #1E88E5;
+  --amarillo: #F9C80E;
+  --gris-oscuro: #2E2E2E;
+  --blanco: #FFFFFF;
+  --gris-claro: #F8F9FA;
+}
+
+/* === Tipografía moderna === */
+body {
+  background-color: var(--gris-claro);
+  font-family: "Poppins", Arial, sans-serif;
+  color: var(--gris-oscuro);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* === NAVBAR === */
+.navbar {
+  background-color: var(--azul);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* ✨ Efecto brillante en "Concretos Sharmelly" === */
+.navbar-brand {
+  color: var(--amarillo) !important;
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 6px rgba(249, 200, 14, 0.6);
+  animation: brillo-logo 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes brillo-logo {
+  0% {
+    text-shadow: 0 0 5px rgba(249, 200, 14, 0.4),
+                 0 0 10px rgba(249, 200, 14, 0.2);
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(249, 200, 14, 1),
+                 0 0 25px rgba(249, 200, 14, 0.9);
+  }
+}
+
+.nav-link {
+  color: var(--blanco) !important;
+  font-weight: 500;
+  margin-left: 10px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--amarillo) !important;
+  text-decoration: underline;
+}
+
+/* === CABECERA === */
+.header-txt {
+  text-align: center;
+  margin: 40px 10%;
+}
+
+.header-txt h1 {
+  color: var(--azul);
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.header-txt p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--gris-oscuro);
+}
+
+/* === CONTENEDOR DE PRODUCTOS === */
+section.container.my-5 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 30px;
+}
+
+/* === TARJETAS DE PRODUCTOS === */
+.card {
+  border: none;
+  border-radius: 15px;
+  background-color: var(--blanco);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Imagen con degradado */
+.card-img-top {
+  height: 160px;
+  object-fit: contain;
+  background: linear-gradient(to bottom right, var(--azul), var(--gris-oscuro));
+  padding: 20px;
+}
+
+/* Texto dentro de la tarjeta */
+.card-body {
+  padding: 18px;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--azul);
+  margin-bottom: 8px;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Precio destacado */
+.card-body p strong {
+  color: var(--amarillo);
+  font-size: 1.2rem;
+}
+
+/* === BOTÓN COMPRAR === */
+.btn-comprar {
+  background-color: var(--azul);
+  color: var(--blanco);
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  padding: 10px 0;
+  transition: all 0.3s ease;
+}
+
+.btn-comprar:hover {
+  background-color: var(--amarillo);
+  color: var(--gris-oscuro);
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(249, 200, 14, 0.7);
+}
+
+/* === FOOTER === */
+footer {
+  background-color: var(--gris-oscuro);
+  color: var(--blanco);
+  padding: 40px 0;
+  margin-top: 60px;
+  text-align: center;
+  border-top: 3px solid var(--amarillo);
+}
+
+footer a {
+  color: var(--amarillo);
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--azul);
+}
+
+footer strong {
+  color: var(--amarillo);
+}
+
+footer i {
+  transition: transform 0.3s;
+}
+
+footer i:hover {
+  transform: scale(1.2);
+  color: var(--amarillo);
+}

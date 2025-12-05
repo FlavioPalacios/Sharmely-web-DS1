@@ -1,0 +1,330 @@
+/* === Paleta de Colores === */
+:root {
+  --azul: #1E88E5;
+  --amarillo: #F9C80E;
+  --gris-oscuro: #2E2E2E;
+  --blanco: #FFFFFF;
+  --gris-claro: #F5F5F5;
+}
+
+/* === Tipografía moderna === */
+body {
+  background-color: var(--gris-claro);
+  color: var(--gris-oscuro);
+  font-family: "Poppins", Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* === Navbar === */
+.navbar {
+  background-color: var(--gris-oscuro);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeDown 1s ease;
+}
+
+/* ✨ Efecto brillante en "Concretos Sharmelly" === */
+.navbar-brand {
+  color: var(--amarillo) !important;
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 0.6px;
+  text-shadow: 0 0 6px rgba(249, 200, 14, 0.6);
+  animation: brillo-logo 2.5s ease-in-out infinite alternate;
+}
+
+/* Animación de brillo del logo */
+@keyframes brillo-logo {
+  0% {
+    text-shadow: 0 0 5px rgba(249, 200, 14, 0.4),
+                 0 0 10px rgba(249, 200, 14, 0.2);
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(249, 200, 14, 1),
+                 0 0 25px rgba(249, 200, 14, 0.9);
+  }
+}
+
+/* === Navegación === */
+.nav-link {
+  color: var(--blanco) !important;
+  font-weight: 500;
+  margin-left: 10px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--amarillo) !important;
+  transform: translateY(-2px);
+}
+
+/* === Header principal === */
+.header-txt {
+  text-align: center;
+  padding: 70px 10%;
+  background-color: var(--blanco);
+  border-bottom: 4px solid var(--azul);
+  animation: fadeUp 1s ease;
+}
+
+/* ✨ Efecto brillante solo en el título principal */
+.header-txt h2 {
+  font-weight: 700;
+  color: var(--amarillo);
+  text-shadow: 0 0 8px rgba(249, 200, 14, 0.6);
+  animation: brillo-titulo 2.5s ease-in-out infinite alternate;
+}
+
+/* Animación del brillo del título */
+@keyframes brillo-titulo {
+  0% {
+    text-shadow: 0 0 5px rgba(249, 200, 14, 0.4),
+                 0 0 10px rgba(249, 200, 14, 0.2);
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(249, 200, 14, 1),
+                 0 0 25px rgba(249, 200, 14, 0.9);
+  }
+}
+
+.header-txt p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  color: var(--gris-oscuro);
+  animation: fadeIn 1.5s ease;
+}
+
+/* === Botones === */
+.btn-comprar {
+  background-color: var(--azul);
+  color: var(--blanco);
+  border: none;
+  margin: 5px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  animation: popIn 1.2s ease;
+}
+
+.btn-comprar:hover {
+  background-color: var(--amarillo);
+  color: var(--gris-oscuro);
+  transform: scale(1.07);
+  box-shadow: 0 0 12px rgba(249, 200, 14, 0.7);
+}
+
+/* === Tarjetas === */
+.tarjeta {
+  border: 2px solid var(--azul);
+  border-radius: 15px;
+  background-color: var(--blanco);
+  transition: transform 0.3s, box-shadow 0.3s;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.tarjeta.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.8s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(30,136,229,0.3);
+}
+
+.tarjeta i {
+  color: var(--azul);
+  transition: all 0.3s ease;
+}
+
+.tarjeta:hover i {
+  color: var(--amarillo);
+  transform: scale(1.1);
+}
+
+/* === Sección Cotización === */
+section.text-center {
+  background-color: var(--azul);
+  color: var(--blanco);
+  padding: 50px 20px;
+  border-top: 4px solid var(--amarillo);
+  border-bottom: 4px solid var(--amarillo);
+  animation: fadeUp 1.3s ease;
+}
+
+section.text-center h3 {
+  font-weight: 700;
+  animation: slideUp 1s ease;
+}
+
+section.text-center p {
+  color: var(--blanco);
+  opacity: 0.9;
+}
+
+/* === Footer === */
+footer {
+  background-color: var(--gris-oscuro);
+  color: var(--blanco);
+  padding: 40px 0;
+  margin-top: 60px;
+  font-size: 0.95rem;
+  border-top: 3px solid var(--amarillo);
+  animation: fadeIn 2s ease;
+}
+
+footer a {
+  color: var(--blanco);
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: var(--amarillo);
+}
+
+footer strong {
+  color: var(--amarillo);
+}
+
+footer i {
+  transition: transform 0.3s;
+}
+
+footer i:hover {
+  transform: scale(1.2);
+  color: var(--amarillo);
+}
+
+/* === Carrito === */
+.submenu img {
+  width: 40px;
+  cursor: pointer;
+  animation: popIn 1.5s ease;
+}
+
+#carrito {
+  display: none;
+  position: absolute;
+  background-color: var(--blanco);
+  color: var(--gris-oscuro);
+  border: 1px solid #ccc;
+  padding: 15px;
+  right: 10px;
+  top: 60px;
+  width: 260px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.submenu:hover #carrito {
+  display: block;
+}
+
+.btn-3 {
+  background-color: #dc3545;
+  color: var(--blanco);
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: all 0.3s;
+}
+
+.btn-3:hover {
+  background-color: #bb2d3b;
+  box-shadow: 0 0 10px #ff4b4b;
+}
+
+/* === Keyframes globales === */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeUp {
+  from {opacity: 0; transform: translateY(30px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeDown {
+  from {opacity: 0; transform: translateY(-30px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes slideUp {
+  from {opacity: 0; transform: translateY(50px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes popIn {
+  0% {opacity: 0; transform: scale(0.8);}
+  100% {opacity: 1; transform: scale(1);}
+}
+
+/* === Corrección de visibilidad inicial === */
+.tarjeta,
+.header-txt,
+section.text-center,
+footer,
+.navbar {
+  opacity: 1; /* Siempre visible */
+  transform: none; /* Sin desplazamiento inicial */
+}
+
+/* === Animaciones al cargar === */
+body {
+  animation: fadeIn 1s ease;
+}
+
+.header-txt h2 {
+  animation: brillo-titulo 2.5s ease-in-out infinite alternate;
+}
+
+.btn-comprar {
+  animation: popIn 0.8s ease;
+}
+
+.tarjeta {
+  animation: fadeUpCard 1s ease forwards;
+}
+
+/* === Nueva animación segura (sin ocultar el texto) === */
+@keyframes fadeUpCard {
+  0% {
+    transform: translateY(15px);
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+  }
+  100% {
+    transform: translateY(0);
+    box-shadow: 0 8px 20px rgba(30,136,229,0.2);
+  }
+}
+
+/* El resto de tus animaciones siguen igual */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes brillo-titulo {
+  0% {
+    text-shadow: 0 0 5px rgba(249, 200, 14, 0.4),
+                 0 0 10px rgba(249, 200, 14, 0.2);
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(249, 200, 14, 1),
+                 0 0 25px rgba(249, 200, 14, 0.9);
+  }
+}
+
+@keyframes popIn {
+  0% {transform: scale(0.95);}
+  100% {transform: scale(1);}
+}
+
+

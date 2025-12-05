@@ -1,0 +1,192 @@
+/* === Paleta de Colores === */
+:root {
+  --azul: #1E88E5;
+  --amarillo: #F9C80E;
+  --gris-oscuro: #2E2E2E;
+  --blanco: #FFFFFF;
+}
+
+/* === Tipografía moderna === */
+body {
+  background-color: var(--blanco);
+  font-family: "Poppins", Arial, sans-serif;
+  color: var(--gris-oscuro);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* === NAVBAR === */
+.navbar {
+  background-color: var(--azul);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* ✨ Efecto brillante en "Concretos Sharmelly" === */
+.navbar-brand {
+  color: var(--amarillo) !important;
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 6px rgba(249, 200, 14, 0.6);
+  animation: brillo-logo 2.5s ease-in-out infinite alternate;
+}
+
+/* Animación del brillo */
+@keyframes brillo-logo {
+  0% {
+    text-shadow: 0 0 5px rgba(249, 200, 14, 0.4),
+                 0 0 10px rgba(249, 200, 14, 0.2);
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(249, 200, 14, 1),
+                 0 0 25px rgba(249, 200, 14, 0.9);
+  }
+}
+
+.nav-link {
+  color: var(--blanco) !important;
+  font-weight: 500;
+  margin-left: 10px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--amarillo) !important;
+  text-decoration: underline;
+}
+
+/* === CABECERA === */
+.header-txt {
+  text-align: center;
+  margin: 40px 10%;
+  color: var(--azul);
+}
+
+.header-txt h1 {
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.header-txt p {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* === BOTÓN COMPRAR === */
+.btn-comprar {
+  background-color: var(--azul);
+  color: var(--blanco);
+  border: none;
+  margin: 5px;
+  border-radius: 8px;
+  padding: 12px 24px;
+  transition: all 0.3s ease;
+}
+
+.btn-comprar:hover {
+  background-color: var(--amarillo);
+  color: var(--gris-oscuro);
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(249, 200, 14, 0.7);
+}
+
+/* === SECCIÓN CONTACTO === */
+.contacto h1, .contacto h3 {
+  color: var(--azul);
+  font-weight: 700;
+}
+
+.contacto .card {
+  border-radius: 20px;
+  background-color: var(--blanco);
+  transition: all 0.3s ease-in-out;
+  border: 2px solid transparent;
+}
+
+.contacto .card:hover {
+  transform: translateY(-5px);
+  border-color: var(--azul);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* === BOTÓN ENVIAR === */
+.btn-enviar {
+  background-color: var(--azul);
+  color: var(--blanco);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-enviar:hover {
+  background-color: var(--amarillo);
+  color: var(--gris-oscuro);
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(249, 200, 14, 0.7);
+}
+
+/* === BOTÓN LLAMAR === */
+.btn-llamar {
+  display: inline-block;
+  background-color: var(--amarillo);
+  color: var(--gris-oscuro);
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 12px 24px;
+  transition: all 0.3s ease;
+}
+
+.btn-llamar:hover {
+  background-color: #FFD84A;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(249, 200, 14, 0.6);
+}
+
+/* === MAPA === */
+.mapa iframe {
+  border-radius: 20px;
+  width: 100%;
+  height: 350px;
+  border: 2px solid var(--azul);
+  transition: all 0.3s;
+}
+
+.mapa iframe:hover {
+  box-shadow: 0 0 15px rgba(30, 136, 229, 0.4);
+}
+
+/* === FOOTER === */
+footer {
+  background-color: var(--gris-oscuro);
+  color: var(--blanco);
+  padding: 40px 0;
+  margin-top: 60px;
+  text-align: center;
+  border-top: 3px solid var(--amarillo);
+}
+
+footer a {
+  color: var(--amarillo);
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--azul);
+}
+
+footer strong {
+  color: var(--amarillo);
+}
+
+footer i {
+  transition: transform 0.3s;
+}
+
+footer i:hover {
+  transform: scale(1.2);
+  color: var(--amarillo);
+}
+
